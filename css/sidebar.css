@@ -1,0 +1,161 @@
+html, body {
+	height: 100%;
+	font-family: "Open Sans";
+}
+
+body {
+    overflow-x: scroll;  /*Change to "hidden" if you don't want a scrollbar!*/
+}
+
+.post-date {
+    font-weight: bold;
+    display: inline-block;
+}
+
+.post-line {
+    color: black;
+    height: 15px;
+    width: 70%;
+    margin-top: 30px;
+}
+
+.title-me {
+    margin: 0;
+    font-family: "Signika";
+    letter-spacing: 1px;
+}
+
+#icon {
+    display: block;
+    width: 120px;
+    margin: 10px auto;
+}
+
+#pages {
+    margin-left: 40px;
+}
+
+/* Toggle Styles */
+
+#wrapper {
+	height: 100%;
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;  /*Determines whether content is front or back. Higher = front.*/
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 50%;  /*Change to 100% to get full height!*/
+    margin-top: 170px;  /*If change height, adjust or remove this!*/
+    margin-left: -250px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    height: 100%;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    position: absolute;
+    padding: 15px;
+    margin-left: 15px;
+    box-shadow:
+        inset #50d8f7 5px 0 0 0,
+        inset #8ce9ff 8px 0 0 0,
+        inset #88e2f7 10px 0 0 0
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-stuff {
+	margin: 0px 10px;
+}
+
+#title {
+	display: block;
+	font-family: "Signika";
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#description {
+	display: block;
+	margin: 0 5px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+hr {
+	margin: auto;
+	padding: 5px;
+	width: 50%;
+}
+
+nav {
+	margin: 0px 20px 0px 30px;
+}
+
+nav a {
+	display: inline-block;
+	margin: 0 6px;
+}
+
+nav span {
+    display: inline-block;
+    margin: 0 6px;
+}
+
+/*Don't touch!*/
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}

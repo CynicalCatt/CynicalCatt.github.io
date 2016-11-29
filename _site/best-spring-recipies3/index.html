@@ -1,0 +1,99 @@
+<!-- Enables CSS and JS -->
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Meta data! Do not edit or remove. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+
+  <title></title>
+
+  <!-- Bootstrap Core CSS, JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Signika:600" rel="stylesheet">
+</head>
+<body>
+  <!-- jQuery Core CSS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</body>
+</html>
+
+<div id="wrapper">
+        <!-- Sidebar! Put under main content to move to right. -->
+        <div id="sidebar-wrapper">
+           	<div class="sidebar-stuff">
+	<div id="title"><a href="/">CynicalCatt</a></div>
+	<img id="icon" src="/assets/user.png">
+	<span id="description">Programming hobbyist. Budding linguist. Always, always learning.</span>
+	<hr>
+	<nav>
+		<div>
+			<!-- Pagination!! -->
+			<p id="pages">
+				
+				    <span class="previous"> << </span>
+				
+				<span>[]</span>
+				
+				    <span class="next"> >> </span>
+				
+			</p>
+			<!-- Regular links!! -->
+			<p>
+				<a class="nav" href="">Meow</a>
+				<a class="nav" href="">Meow</a>
+				<a class="nav" href="">Meow</a>
+			</p>
+		</div>
+	</nav>
+</div>
+        </div>
+
+        <!-- Main content! -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                    	<a href="#menu-toggle" class="btn btn-default visible-xs" id="menu-toggle">Toggle Menu</a>
+                    	<h1 class="title-me">Cosdfdsf</h1>
+                    	<p class="post-date">08 March 2013</p>
+                        <p>Sed id lacus eu urna ullamcorper mattis. Etiam ut nunc erat. Sed et velit ac nisi mattis mollis tempus id nulla. In varius fermentum posuere. Vivamus suscipit accumsan arcu ac ullamcorper. Aliquam adipiscing, ante non eleifend blandit, nunc diam vulputate augue, eu convallis lorem lacus in lacus. Curabitur ultricies ultrices diam, vel tincidunt dui rhoncus a. Vivamus at sapien in turpis consequat pharetra sit amet quis elit.</p>
+
+                        <hr class="post-line">
+                        <p>
+	<div id="disqus_thread"></div>
+	<script>
+	var disqus_config = function () {
+	this.page.url = "http://BLOG.host.com/best-spring-recipies3/"; // <--- use canonical URL
+	this.page.identifier = "/best-spring-recipies3";
+	};
+	(function() { // DON'T EDIT BELOW THIS LINE
+	var d = document, s = d.createElement('script');
+
+	s.src = '//cynicalcatt.disqus.com/embed.js'; // <--- use Disqus shortname
+
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>

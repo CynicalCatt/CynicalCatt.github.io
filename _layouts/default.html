@@ -1,0 +1,27 @@
+<!-- Enables CSS and JS -->
+{% include header.html %}
+
+<div id="wrapper">
+        <!-- Sidebar! Put under main content to move to right. -->
+        <div id="sidebar-wrapper">
+           	{% include sidebar.html %}
+        </div>
+
+        <!-- Main content! -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                    	<a href="#menu-toggle" class="btn btn-default visible-xs" id="menu-toggle">Toggle Menu</a>
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>

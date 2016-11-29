@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+{% for post in paginator.posts %}
+	<h2 class="title-me">{{ post.title }}</h2>
+	<p class="post-date">{{ post.date | date_to_long_string }}</p>
+	<p>{{ post.excerpt }}</p>
+	<p><a href="{{ post.url }}">Read More</a></p>
+	<hr class="post-line">
+{% endfor %}

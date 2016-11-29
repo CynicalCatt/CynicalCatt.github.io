@@ -1,0 +1,8 @@
+name: CynicalCatt
+description: Budding Programmer.
+url: "http://CynicalCatt.github.io"
+paginate: 8
+markdown: kramdown
+permalink: /:categories/:title/
+
+gems: [jekyll-paginate]

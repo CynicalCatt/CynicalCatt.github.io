@@ -1,0 +1,32 @@
+<!-- Enables CSS and JS -->
+{% include header.html %}
+
+<div id="wrapper">
+        <!-- Sidebar! Put under main content to move to right. -->
+        <div id="sidebar-wrapper">
+           	{% include sidebar.html %}
+        </div>
+
+        <!-- Main content! -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                    	<a href="#menu-toggle" class="btn btn-default visible-xs" id="menu-toggle">Toggle Menu</a>
+                    	<h1 class="title-me">{{ page.title }}</h1>
+                    	<p class="post-date">{{ page.date | date_to_long_string }}</p>
+                        {{ content }}
+                        <hr class="post-line">
+                        <p>{% include disqus.html %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
