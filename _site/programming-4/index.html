@@ -1,0 +1,199 @@
+<!-- Enables CSS and JS -->
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Meta data! Do not edit or remove. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+
+  <title></title>
+
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="/css/manni.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Signika:600" rel="stylesheet">
+</head>
+<body>
+  <!-- jQuery Core CSS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Bootstrap Core JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<div id="wrapper">
+        <!-- Sidebar! Put under main content to move to right. -->
+        <div id="sidebar-wrapper">
+           	<div class="sidebar-stuff">
+	<div id="title"><a href="/">CynicalCatt</a></div>
+	<img id="icon" src="/assets/user.png">
+	<span id="description">Programming hobbyist. Budding linguist. Always, always learning.</span>
+	<hr>
+	<nav>
+		<div>
+			<!-- Pagination!! -->
+			<p id="pages">
+				
+				    <span class="previous"> << </span>
+				
+				<span>[]</span>
+				
+				    <span class="next"> >> </span>
+				
+			</p>
+			<!-- Regular links!! -->
+			<p>
+				<a class="nav" href="">Meow</a>
+				<a class="nav" href="">Meow</a>
+				<a class="nav" href="">Meow</a>
+			</p>
+		</div>
+	</nav>
+</div>
+        </div>
+
+        <!-- Main content! -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                    	<a href="#menu-toggle" class="btn btn-default visible-xs" id="menu-toggle">Toggle Menu</a>
+                    	<h1 class="title-me">Programming Session 4</h1>
+                    	<p class="post-date">20 September 2016</p>
+                        <p>I’m trying to approach coding like building a habit. Doing a bit every day will eventually help it all stick in my head. Typhoon days like today really bring that motivation down, but I’m still going at it! 🙂</p>
+
+<p>The Tic Tac Toe exercise was a bit difficult. Cole Steele’s hints set up the basic table, but it took some Googling to discover <a href="http://www.w3schools.com/css/css_table.asp">how to get rid of the table border</a>, put borders only on certain sides, and <a href="http://stackoverflow.com/questions/22285633/how-to-align-entire-table-to-right-with-css">center the whole table</a>. I’m pretty sure there are better ways of going about this exercise, but as a newbie using just a tad bit more than what my instructor taught me, here’s what I did:</p>
+
+<p><strong>HTML</strong></p>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;body&gt;</span>
+	<span class="nt">&lt;h1&gt;</span>Tic Tac Toe<span class="nt">&lt;/h1&gt;</span>
+	<span class="nt">&lt;table&gt;</span>
+		<span class="nt">&lt;tr&gt;</span>
+			<span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+			<span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+			<span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+		<span class="nt">&lt;/tr&gt;</span>
+		<span class="nt">&lt;tr&gt;</span>
+			<span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+			<span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+			<span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+		<span class="nt">&lt;/tr&gt;</span>
+		<span class="nt">&lt;tr&gt;</span>
+			<span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+			<span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+			<span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+		<span class="nt">&lt;/tr&gt;</span>
+	<span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>CSS</strong></p>
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="c">/*TITLE*/</span>
+<span class="nt">h1</span> <span class="p">{</span>
+	<span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/*REMOVE BORDER, CENTER TABLE*/</span>
+<span class="nt">table</span> <span class="p">{</span>
+	<span class="nl">border-collapse</span><span class="p">:</span> <span class="nb">collapse</span><span class="p">;</span>
+	<span class="nl">margin-right</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+	<span class="nl">margin-left</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/*BOX SIZE*/</span>
+<span class="nt">td</span> <span class="p">{</span>
+	<span class="nl">width</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+	<span class="nl">height</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/*LEFT OF MIDDLE SQUARE*/</span>
+<span class="nt">tr</span><span class="nd">:nth-of-type</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="nt">td</span><span class="nd">:nth-of-type</span><span class="o">(</span><span class="nt">1</span><span class="o">)</span> <span class="p">{</span>
+	<span class="nl">border-top</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+	<span class="nl">border-bottom</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/*RIGHT OF MIDDLE SQUARE*/</span>
+<span class="nt">tr</span><span class="nd">:nth-of-type</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="nt">td</span><span class="nd">:nth-of-type</span><span class="o">(</span><span class="nt">3</span><span class="o">)</span> <span class="p">{</span>
+	<span class="nl">border-top</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+	<span class="nl">border-bottom</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/*MIDDLE SQUARE*/</span>
+<span class="nt">tr</span><span class="nd">:nth-of-type</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="nt">td</span><span class="nd">:nth-of-type</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span>
+	<span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/*ABOVE MIDDLE SQUARE*/</span>
+<span class="nt">tr</span><span class="nd">:nth-of-type</span><span class="o">(</span><span class="nt">1</span><span class="o">)</span> <span class="nt">td</span><span class="nd">:nth-of-type</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span>
+	<span class="nl">border-left</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+	<span class="nl">border-right</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/*BELOW MIDDLE SQUARE*/</span>
+<span class="nt">tr</span><span class="nd">:nth-of-type</span><span class="o">(</span><span class="nt">3</span><span class="o">)</span> <span class="nt">td</span><span class="nd">:nth-of-type</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span>
+	<span class="nl">border-left</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+	<span class="nl">border-right</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Looking at the solutions video taught me that CSS classes were made to reduce redundant code. In short, be a lazy programmer! The less you have to type to get a result, the <em>better</em>! Or maybe not, but that’s what I got out of this. Incredibly similar to writing an English essay…</p>
+
+<p>Before moving onto the next exercise, I attempted to replace all the images with some of <a href="https://www.google.co.jp/search?q=%E3%81%91%E3%82%82%E6%9D%BE&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ved=0ahUKEwjYv6ed7Z3PAhUaHGMKHcn7DFgQ_AUICCgB&amp;biw=1280&amp;bih=616">my favorite fan art</a> so I could take a screenshot and show off to my friends. To my surprise, I came across a conundrum: <a href="http://stackoverflow.com/questions/5234749/css-floating-divs-at-variable-heights">When you have images (or anything, really) of differing sizes, you can’t put them all in the same line using floats.</a> At least, it’s not possible with pure CSS. Hopefully later on, I’ll stumble across a way to solve this issue!</p>
+
+<p>The “make a blog from scratch” exercise was really fun! I went into it a bit nervous, but Cole Steele taught well enough for me to pull off the general look without needing to look at the solution! I even found a nifty, easy way to <a href="https://css-tricks.com/examples/hrs/">get my &lt;hr&gt; to look incredibly cool</a>. The best part about this trick is that it’s a background color, which means it’s applicable on other elements as well. I tested it on my “quote” paragraphs and got a really nice effect:</p>
+
+<p><img src="http://www.pixhoster.info/f/2016-11/b0424308363ee1c60c936d087e0aeb80.png" alt="cool-quote" class="img-responsive img" /></p>
+
+<p>My thinking process went like this:</p>
+
+<ol>
+  <li>Style the border on the body.</li>
+  <li>Write all the text, including that &lt;hr&gt;.</li>
+  <li>Sort out body width, margins, padding.</li>
+  <li>Group dates, article titles, quote blocks, and regular text as separate classes.</li>
+  <li>Style each class.</li>
+  <li>Style the &lt;hr&gt;.</li>
+</ol>
+
+<p>Next session will focus on Bootstrap. I’ve never used it before, so I’m really excited to see what that’s like! I heard it can make my coding experience a little easier and faster. 🙂</p>
+
+                        <hr class="post-line">
+                        <p>
+	<div id="disqus_thread"></div>
+	<script>
+	var disqus_config = function () {
+	this.page.url = "http://BLOG.host.com/programming-4/"; // <--- use canonical URL
+	this.page.identifier = "/programming-4";
+	};
+	(function() { // DON'T EDIT BELOW THIS LINE
+	var d = document, s = d.createElement('script');
+
+	s.src = '//cynicalcatt.disqus.com/embed.js'; // <--- use Disqus shortname
+
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>

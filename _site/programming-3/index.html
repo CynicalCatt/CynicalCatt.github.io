@@ -9,11 +9,12 @@
 
   <title></title>
 
-  <!-- Bootstrap Core CSS, JS -->
+  <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="/css/manni.css">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -22,6 +23,8 @@
 <body>
   <!-- jQuery Core CSS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Bootstrap Core JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
 
@@ -62,17 +65,28 @@
                 <div class="row">
                     <div class="col-lg-12">
                     	<a href="#menu-toggle" class="btn btn-default visible-xs" id="menu-toggle">Toggle Menu</a>
-                    	<h1 class="title-me">Cosdfdsf</h1>
-                    	<p class="post-date">08 March 2013</p>
-                        <p>Sed id lacus eu urna ullamcorper mattis. Etiam ut nunc erat. Sed et velit ac nisi mattis mollis tempus id nulla. In varius fermentum posuere. Vivamus suscipit accumsan arcu ac ullamcorper. Aliquam adipiscing, ante non eleifend blandit, nunc diam vulputate augue, eu convallis lorem lacus in lacus. Curabitur ultricies ultrices diam, vel tincidunt dui rhoncus a. Vivamus at sapien in turpis consequat pharetra sit amet quis elit.</p>
+                    	<h1 class="title-me">Programming Session 3</h1>
+                    	<p class="post-date">19 September 2016</p>
+                        <p>Beginner’s CSS is… easy. Not sure if it’s because I did it before or rather, if it’s because CSS syntax is often self-explanatory. Even specificity was easy to get without the long-winded explanation, because it’s just… logical. Learning about the Chrome Inspector was interesting though. Dabbled in it before, out of curiosity, but it was my first time actually learning about it.</p>
+
+<p>The selectors practice exercise, however, was a bit difficult. Everything went easy as pie up until I had to use the nth-of-type selector. Didn’t really understand it in the video explanation and <a href="https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048">the website provided</a> didn’t help much either. Found a probable answer on <a href="http://stackoverflow.com/questions/30256644/how-to-select-a-only-a-paticular-p-tag-inside-div-tag-hierarchically">Stack Overflow</a>, so stuck that in with a few modifications… and luckily, it worked. Then the solutions video cleared it all up. Thanks Cole Steele! 🙂</p>
+
+<p>For those that still don’t get it:</p>
+
+<ul>
+  <li><strong>div:nth-of-type(3)</strong> == Pick the 3rd div.</li>
+  <li><strong>div:nth-of-type(3) p:nth-of-type(2)</strong> == Pick the 3rd div, then pick the 2nd paragraph in that div.</li>
+</ul>
+
+<p>Ended today’s session halfway through Section 6. Next up’s the <a href="https://daks2k3a4ib2z.cloudfront.net/55fba7ade2ae0be15df2b309/56c13fd6bf6d3281049d04ae_box-model.gif">Box Model</a>, which I remember to be surprisingly difficult several years prior, so let’s see if Colt Steele has managed to explain it in a better way…</p>
 
                         <hr class="post-line">
                         <p>
 	<div id="disqus_thread"></div>
 	<script>
 	var disqus_config = function () {
-	this.page.url = "http://BLOG.host.com/best-spring-recipies3/"; // <--- use canonical URL
-	this.page.identifier = "/best-spring-recipies3";
+	this.page.url = "http://BLOG.host.com/programming-3/"; // <--- use canonical URL
+	this.page.identifier = "/programming-3";
 	};
 	(function() { // DON'T EDIT BELOW THIS LINE
 	var d = document, s = d.createElement('script');

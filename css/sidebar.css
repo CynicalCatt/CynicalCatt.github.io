@@ -35,6 +35,10 @@ body {
     margin-left: 40px;
 }
 
+.img {
+    margin: 20px auto;
+}
+
 /* Toggle Styles */
 
 #wrapper {
