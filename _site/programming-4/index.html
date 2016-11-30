@@ -72,7 +72,8 @@
 <p>The Tic Tac Toe exercise was a bit difficult. Cole Steele’s hints set up the basic table, but it took some Googling to discover <a href="http://www.w3schools.com/css/css_table.asp">how to get rid of the table border</a>, put borders only on certain sides, and <a href="http://stackoverflow.com/questions/22285633/how-to-align-entire-table-to-right-with-css">center the whole table</a>. I’m pretty sure there are better ways of going about this exercise, but as a newbie using just a tad bit more than what my instructor taught me, here’s what I did:</p>
 
 <p><strong>HTML</strong></p>
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;body&gt;</span>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;body&gt;</span>
 	<span class="nt">&lt;h1&gt;</span>Tic Tac Toe<span class="nt">&lt;/h1&gt;</span>
 	<span class="nt">&lt;table&gt;</span>
 		<span class="nt">&lt;tr&gt;</span>
@@ -91,12 +92,11 @@
 			<span class="nt">&lt;td&gt;&lt;/td&gt;</span>
 		<span class="nt">&lt;/tr&gt;</span>
 	<span class="nt">&lt;/table&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-</code></pre>
-</div>
+<span class="nt">&lt;/body&gt;</span></code></pre></figure>
 
 <p><strong>CSS</strong></p>
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="c">/*TITLE*/</span>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/*TITLE*/</span>
 <span class="nt">h1</span> <span class="p">{</span>
 	<span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
 <span class="p">}</span>
@@ -141,9 +141,7 @@
 <span class="nt">tr</span><span class="nd">:nth-of-type</span><span class="o">(</span><span class="nt">3</span><span class="o">)</span> <span class="nt">td</span><span class="nd">:nth-of-type</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span>
 	<span class="nl">border-left</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
 	<span class="nl">border-right</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre>
-</div>
+<span class="p">}</span></code></pre></figure>
 
 <p>Looking at the solutions video taught me that CSS classes were made to reduce redundant code. In short, be a lazy programmer! The less you have to type to get a result, the <em>better</em>! Or maybe not, but that’s what I got out of this. Incredibly similar to writing an English essay…</p>
 

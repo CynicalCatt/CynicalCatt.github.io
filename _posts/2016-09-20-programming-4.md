@@ -9,7 +9,7 @@ I’m trying to approach coding like building a habit. Doing a bit every day wil
 The Tic Tac Toe exercise was a bit difficult. Cole Steele’s hints set up the basic table, but it took some Googling to discover [how to get rid of the table border](http://www.w3schools.com/css/css_table.asp), put borders only on certain sides, and [center the whole table](http://stackoverflow.com/questions/22285633/how-to-align-entire-table-to-right-with-css). I’m pretty sure there are better ways of going about this exercise, but as a newbie using just a tad bit more than what my instructor taught me, here’s what I did:
 
 **HTML**
-```html
+{% highlight html %}
 <body>
 	<h1>Tic Tac Toe</h1>
 	<table>
@@ -30,10 +30,10 @@ The Tic Tac Toe exercise was a bit difficult. Cole Steele’s hints set up the b
 		</tr>
 	</table>
 </body>
-```
+{% endhighlight %}
 
 **CSS**
-```css
+{% highlight css %}
 /*TITLE*/
 h1 {
 	text-align: center;
@@ -80,7 +80,7 @@ tr:nth-of-type(3) td:nth-of-type(2) {
 	border-left: 2px solid black;
 	border-right: 2px solid black;
 }
-```
+{% endhighlight %}
 
 Looking at the solutions video taught me that CSS classes were made to reduce redundant code. In short, be a lazy programmer! The less you have to type to get a result, the *better*! Or maybe not, but that’s what I got out of this. Incredibly similar to writing an English essay…
 
