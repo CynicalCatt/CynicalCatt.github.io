@@ -65,29 +65,41 @@
                 <div class="row">
                     <div class="col-lg-12">
                     	<a href="#menu-toggle" class="btn btn-default visible-xs" id="menu-toggle">Toggle Menu</a>
-                    	<h1 class="title-me">Programming Session 2</h1>
-                    	<p class="post-date">18 September 2016</p>
-                        <p>Started off where I last left off: Tables and forms.</p>
+                    	<h1 class="title-me">Programming Session 10</h1>
+                    	<p class="post-date">26 September 2016</p>
+                        <p>More arrays!</p>
 
-<p>Tables were easy enough. Did them before, tags are mostly self-explanatory, so I could do them again. Had to get a bit used to the HTML 5 way of laying out tables, but otherwise it went swimmingly.</p>
+<p>To be specific, I’m covering the problem set that I didn’t have the time (and energy) to do in my last session. Functions and arrays are surprising weak spots of mine, so it took me quite a while to complete this problem set.</p>
 
-<p>Forms, however, was a bit of a pain in the arse. Never did them before, so it was all new content. In my opinion, Colt Steele also rushed through it quite a bit, with no exercises in-between explaining the bits and pieces of a form before getting into a full-blown “recreate this form” exercise. But maybe I just have a short attention span…</p>
+<p>With a little help from <a href="http://stackoverflow.com/questions/4956256/loop-through-associative-array-in-reverse">Stack Overflow</a>, I was easily able to print out an array in reversed order <em>without</em> reversing the entire array itself. Surprisingly, I was also able to create a function, max(), that printed out the max number in an array <em>all by myself</em>:</p>
 
-<p>Then onto CSS! The way to make websites beautiful. 🙂</p>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">max</span><span class="p">()</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">list</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">if</span> <span class="p">(</span><span class="nx">max</span> <span class="o">&lt;</span> <span class="nx">list</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="p">{</span>
+			<span class="nx">max</span> <span class="o">=</span> <span class="nx">list</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">max</span><span class="p">);</span>
+<span class="p">}</span>
 
-<p><strong>I love the changes that CSS has gone through over the years.</strong> I was there for the early versions of CSS, where you had to style everything within an element because separate style sheets just didn’t exist. Painful work.</p>
+<span class="nx">max</span><span class="p">();</span></code></pre></figure>
 
-<p>What’s sad is that in-line styling is still used today! I had to work on a newsletter for a volunteer organisation a while back and I was shocked by how the code input box wouldn’t allow separate style sheets, forcing the newsletter creators to style everything in-line. Going through the code just to change a few lines and re-position a few things was an absolute nightmare!</p>
+<p>However, no matter how much <a href="http://stackoverflow.com/questions/16057672/sum-values-from-an-array-in-javascript">Stack Overflow</a> I peered through, I was unable to figure out how to get the sum of an array or check if all the items in an array were uniform. Going through the solutions and modifying them to accept a predefined array with a more experienced friend helped me truly realize the difference between return and console.log(). Mainly that one of them doesn’t always show up in the Chrome console while the other does. (Seriously. That’s all I did wrong.)</p>
 
-<p>I have a feeling that the CSS sections will go a lot more slowly than HTML, since I haven’t had much practice with it. But I’m looking forward to it!</p>
+<p>Now onto objects!</p>
+
+<p>Never studied them before. Or maybe I have, but I have no knowledge of them. JavaScript objects seem to be easy enough to make and call.</p>
+
+<p>…and that’s honestly it for today. I’ve been moving at a slower pace lately. It’s starting to take more time to do each section because I spend more time trying to code by myself before looking at the solutions, including debugging said code. But I’m sure I’ll get through the entire course. After all, I paid for it! 🙂</p>
 
                         <hr class="post-line">
                         <p>
 	<div id="disqus_thread"></div>
 	<script>
 	var disqus_config = function () {
-	this.page.url = "http://BLOG.host.com/programming-2/"; // <--- use canonical URL
-	this.page.identifier = "/programming-2";
+	this.page.url = "http://BLOG.host.com/programming-10/"; // <--- use canonical URL
+	this.page.identifier = "/programming-10";
 	};
 	(function() { // DON'T EDIT BELOW THIS LINE
 	var d = document, s = d.createElement('script');

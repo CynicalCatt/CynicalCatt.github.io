@@ -1,0 +1,142 @@
+<!-- Enables CSS and JS -->
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Meta data! Do not edit or remove. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+
+  <title></title>
+
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="/css/manni.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Signika:600" rel="stylesheet">
+</head>
+<body>
+  <!-- jQuery Core CSS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Bootstrap Core JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<div id="wrapper">
+        <!-- Sidebar! Put under main content to move to right. -->
+        <div id="sidebar-wrapper">
+           	<div class="sidebar-stuff">
+	<div id="title"><a href="/">CynicalCatt</a></div>
+	<img id="icon" src="/assets/user.png">
+	<span id="description">Programming hobbyist. Budding linguist. Always, always learning.</span>
+	<hr>
+	<nav>
+		<div>
+			<!-- Pagination!! -->
+			<p id="pages">
+				
+				    <span class="previous"> << </span>
+				
+				<span>[]</span>
+				
+				    <span class="next"> >> </span>
+				
+			</p>
+			<!-- Regular links!! -->
+			<p>
+				<a class="nav" href="">Meow</a>
+				<a class="nav" href="">Meow</a>
+				<a class="nav" href="">Meow</a>
+			</p>
+		</div>
+	</nav>
+</div>
+        </div>
+
+        <!-- Main content! -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                    	<a href="#menu-toggle" class="btn btn-default visible-xs" id="menu-toggle">Toggle Menu</a>
+                    	<h1 class="title-me">Programming Session 11</h1>
+                    	<p class="post-date">27 September 2016</p>
+                        <p>A common myth is that <a href="http://www.huffingtonpost.com/james-clear/forming-new-habits_b_5104807.html">it takes 21 days to create a habit</a>. This has already been debunked by science, but my current goal is to study (and post!) every day for <strong>21 days in a row</strong>.</p>
+
+<p>Had classes in the morning and spent some time laughing at the <a href="https://www.youtube.com/watch?v=EuHuzhzb1nc">2016 USA Presidential Debate</a>, so I got to my programming studies quite late today. Ah well. It’s what you make of it that counts, eh?</p>
+
+<p>Creating arrays with nested objects and using array iteration on them helped me learn a <strong>key lesson</strong>: In your array iteration, there’s no <em>need</em> to specify the object’s position when retrieving data from it, because the iteration automatically delves into the array for you. This is what I mean:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">movies</span> <span class="o">=</span> <span class="p">[</span>
+	<span class="p">{</span><span class="na">title</span><span class="p">:</span> <span class="s2">"Frozen"</span><span class="p">,</span> <span class="na">rating</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="na">hasWatched</span><span class="p">:</span> <span class="kc">true</span><span class="p">},</span>
+	<span class="p">{</span><span class="na">title</span><span class="p">:</span> <span class="s2">"Presidential Debate 2016"</span><span class="p">,</span> <span class="na">rating</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="na">hasWatched</span><span class="p">:</span> <span class="kc">true</span><span class="p">},</span>
+	<span class="p">{</span><span class="na">title</span><span class="p">:</span> <span class="s2">"The Matrix"</span><span class="p">,</span> <span class="na">rating</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="na">hasWatched</span><span class="p">:</span> <span class="kc">false</span><span class="p">}</span>
+<span class="p">];</span>
+<span class="nx">movies</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">movie</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="p">(</span><span class="nx">movie</span><span class="p">.</span><span class="nx">hasWatched</span> <span class="o">!==</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">//NOTE HOW IT ISN'T MOVIES[MOVIE].XXXX</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"You have not watched "</span> <span class="o">+</span> <span class="nx">movie</span><span class="p">.</span><span class="nx">title</span> <span class="o">+</span> <span class="s2">" - "</span> <span class="o">+</span> <span class="nx">movie</span><span class="p">.</span><span class="nx">rating</span> <span class="o">+</span> <span class="s2">" stars."</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="k">else</span> <span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"You have watched "</span> <span class="o">+</span> <span class="nx">movie</span><span class="p">.</span><span class="nx">title</span> <span class="o">+</span> <span class="s2">" - "</span> <span class="o">+</span> <span class="nx">movie</span><span class="p">.</span><span class="nx">rating</span> <span class="o">+</span> <span class="s2">" stars."</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">})</span></code></pre></figure>
+
+<p>Methods are confusing to write and read. In fact, I have a feeling objects in general will be difficult to read if they have multiple nested properties or methods. But I can see the advantage in using them, I guess. When you get used to them, they can really help in organizing data.</p>
+
+<p>Also learned about the key word <em>this</em>, but there were no exercises on it, so I haven’t fully absorbed it yet. It’s something that will be handled later in the course, I guess.</p>
+
+<p><strong>With this, JavaScript basics are officially finished!</strong> 🙂</p>
+
+<p>Before going to bed, I spent some time learning a bit about the DOM. Specifically, selecting and manipulating document objects. I actually studied briefly on the concept many years ago, but back then, I didn’t know what it was called. To me, it was just a random fact. Now that I know it’s a vital part of creating awesome websites, I’m hyped up to learn more!</p>
+
+                        <hr class="post-line">
+                        <p>
+	<div id="disqus_thread"></div>
+	<script>
+	var disqus_config = function () {
+	this.page.url = "http://BLOG.host.com/programming-11/"; // <--- use canonical URL
+	this.page.identifier = "/programming-11";
+	};
+	(function() { // DON'T EDIT BELOW THIS LINE
+	var d = document, s = d.createElement('script');
+
+	s.src = '//cynicalcatt.disqus.com/embed.js'; // <--- use Disqus shortname
+
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<!-- Include Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88254335-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
