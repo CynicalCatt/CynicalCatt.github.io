@@ -23,9 +23,11 @@ Next up was the smaller stuff, like sidebar links, pagination, creating loops to
 What *did* take more time was adding a few big features. Like a [Disqus](https://disqus.com/) comment section for every post. Or [Google Analytics](https://analytics.google.com/). Or even just code highlighting using [Rouge](https://github.com/jneen/rouge) and [Pygments style sheets](https://github.com/richleland/pygments-css).
 
 Tips for those planning on implementing their own Jekyll site:
+
 * [Stack Overflow](http://stackoverflow.com/questions/38486498/vertical-scroll-bars-in-jekyll-rouge) helped me customize the code highlighter to my liking.
 * [This tutorial](https://sacha.me/articles/jekyll-rouge/) on implementing Rouge to a Jekyll site helped me get started on implementing the code highlighter.
 * Michael Lee's [Google Analytics Setup for Jekyll tutorial](https://michaelsoolee.com/google-analytics-jekyll/) is all that's needed to get it set up.
+
 
 **Overall feature implementation time:** 1+ weeks
 
