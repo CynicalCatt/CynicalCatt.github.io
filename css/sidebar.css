@@ -37,6 +37,14 @@ body {
 
 .img {
     margin: 20px auto;
+    max-height: 350px;
+    border: 2px grey solid;
+    border-radius: 5%;
+}
+
+.attention {
+    background: yellow;
+    padding: 2px 2px 2px 2px;
 }
 
 /* Toggle Styles */

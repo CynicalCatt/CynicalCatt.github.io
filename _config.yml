@@ -1,6 +1,7 @@
 name: CynicalCatt
-description: Budding Programmer.
-url: "http://CynicalCatt.github.io"
+description: CynicalCatt's blog. Budding programmer, language enthusiast, gaming addict.
+baseurl: ""
+url: ""
 paginate: 8
 markdown: kramdown
 highlighter: rouge
@@ -9,5 +10,4 @@ kramdown:
   syntax_highlighter: rouge
 highlighter: rouge
 permalink: /:categories/:title/
-
-gems: [jekyll-paginate]
+gems: [jekyll-paginate, jekyll-seo-tag]
