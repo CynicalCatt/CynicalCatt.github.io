@@ -1,7 +1,8 @@
 ---
+title: Jekyll Tutorial 1
+date: '2016-12-01 00:00:00'
 layout: post
 comments: true
-title: Jekyll Tutorial 1
 ---
  
 To help out those just starting their Jekyll blog journey, I decided to create a tutorial series that'll go through the essentials. By the end, you should have a fully functioning blog that you can customize to fit your needs.
