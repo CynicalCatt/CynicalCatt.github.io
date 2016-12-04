@@ -1,0 +1,167 @@
+<!-- Enables CSS and JS -->
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Meta data! Do not edit or remove. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.0.0 -->
+<title>Programming Session 13 - CynicalCatt</title>
+<meta property="og:title" content="Programming Session 13" />
+<meta name="description" content="I made a bit more progress today." />
+<meta property="og:description" content="I made a bit more progress today." />
+<meta property="og:site_name" content="CynicalCatt" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-09-29T00:00:00+09:00" />
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Programming Session 13",
+    "datePublished": "2016-09-29T00:00:00+09:00",
+    "description": "I made a bit more progress today.",
+    "url": "/programming-13/"
+  }
+</script>
+<!-- End Jekyll SEO tag -->
+
+  <title>Programming Session 13</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="/css/manni.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Signika:600" rel="stylesheet">
+</head>
+<body>
+  <!-- jQuery Core CSS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Bootstrap Core JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<div id="wrapper">
+        <!-- Sidebar! Put under main content to move to right. -->
+        <div id="sidebar-wrapper">
+           	<div class="sidebar-stuff">
+	<div id="title"><a href="/">CynicalCatt</a></div>
+	<img id="icon" src="/assets/user.png">
+	<span id="description">Programming hobbyist. Budding linguist. Always, always learning.</span>
+	<hr>
+	<nav>
+		<div>
+			<!-- Pagination!! -->
+			<p id="pages">
+				
+				    <span class="previous"> << </span>
+				
+				<span>[]</span>
+				
+				    <span class="next"> >> </span>
+				
+			</p>
+			<!-- Regular links!! -->
+			<p class="nav">
+				<a class="nav" href="/about/">About</a>
+				<a class="nav" href="">Meow</a>
+				<a class="nav" href="">Meow</a>
+			</p>
+		</div>
+	</nav>
+</div>
+        </div>
+
+        <!-- Main content! -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                    	<a href="#menu-toggle" class="btn btn-default visible-xs" id="menu-toggle">Toggle Menu</a>
+                    	<h1 class="title-me">Programming Session 13</h1>
+                    	<p class="post-date">29 September 2016</p>
+                        <p>I made a bit more progress today.</p>
+
+<p>Got through DOM manipulation basics. The easiest way for me to make sense of event listeners is to compare them to PowerPoint transitions. Also, there’s a surprising amount of functions needed to toggle an event on or off. But I have a feeling I’ll get used to that with time and practice.</p>
+
+<p>Currently working on the score keeper exercise. Before going through the solutions, I attempted to at least make the numbers work by myself. I got around this far before coming into roadblocks on how to implement score limits:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">p1Score</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">p2Score</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">score</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"h1"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">p1Button</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">"button"</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">p2Button</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">"button"</span><span class="p">)[</span><span class="mi">1</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">reset</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">"button"</span><span class="p">)[</span><span class="mi">2</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">limit</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"limit"</span><span class="p">);</span>
+
+<span class="nx">p1Button</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">p1Score</span><span class="o">++</span><span class="p">;</span>
+	<span class="nx">score</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">p1Score</span> <span class="o">+</span> <span class="s2">" to "</span> <span class="o">+</span> <span class="nx">p2Score</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="nx">p2Button</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">p2Score</span><span class="o">++</span><span class="p">;</span>
+	<span class="nx">score</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">p1Score</span> <span class="o">+</span> <span class="s2">" to "</span> <span class="o">+</span> <span class="nx">p2Score</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="nx">reset</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">p1Score</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="nx">p2Score</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="nx">score</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">p1Score</span> <span class="o">+</span> <span class="s2">" to "</span> <span class="o">+</span> <span class="nx">p2Score</span><span class="p">;</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>There’s a lot of refactoring that needs to be done, such as changing the scores into spans. But this code <em>worked</em>, which is better than what I expected.</p>
+
+<p>Tomorrow I’ll be refactoring this code and adding in score limits and a bit more DOM manipulation. It’s tough, but I’m excited to succeed!</p>
+
+<p>Unrelated, but I just signed up for the December JLPT N1 test. Going to have to double my study to attain it. Unlikely that I’ll pass this round, but there’s no harm (besides a bit of money wasted!) in trying it!</p>
+
+                        <hr class="post-line">
+                        <p>
+	<div id="disqus_thread"></div>
+	<script>
+	var disqus_config = function () {
+	this.page.url = "http://BLOG.host.com/programming-13/"; // <--- use canonical URL
+	this.page.identifier = "/programming-13";
+	};
+	(function() { // DON'T EDIT BELOW THIS LINE
+	var d = document, s = d.createElement('script');
+
+	s.src = '//cynicalcatt.disqus.com/embed.js'; // <--- use Disqus shortname
+
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<!-- Include Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88254335-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
